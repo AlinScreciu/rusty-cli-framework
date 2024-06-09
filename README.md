@@ -9,13 +9,13 @@ To use this framework, you need to add it to your `Cargo.toml` file:
 
 ```toml
 [dependencies]
-rusty_cli = "0.1.0"
+a_rusty_cli = "0.1.0"
 ```
 
 Then you can use it in your code like this:
 
 ```rust
-use rusty_cli::{Command, CommandError, CommandManager, Opt, OptValue};
+use a_rusty_cli::{Command, CommandError, CommandManager, Opt, OptValue};
 
 struct EchoCommand;
 
@@ -46,7 +46,7 @@ fn main() {
 You can also add options to your commands. Options are specified using the `Opt` enum, and are passed to the `run` method as a `HashMap<Opt, OptValue>`. Here is an example of a command that takes a `--uppercase` option:
 
 ```rust
-use rusty_cli::{Command, CommandError, CommandManager, Opt, OptValue};
+use a_rusty_cli::{Command, CommandError, CommandManager, Opt, OptValue};
 
 struct LsCommand;
 
@@ -90,7 +90,7 @@ impl Command for LsCommand {
 
         let mut all = false;
 
-        if let Some(opt) = rusty_cli::find_opt(opts, "--all".to_string()) {
+        if let Some(opt) = a_rusty_cli::find_opt(opts, "--all".to_string()) {
             if let OptValue::BOOL(value) = opt {
                 all = value;
             }
