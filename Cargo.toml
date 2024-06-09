@@ -2,5 +2,9 @@
 name = "rusty_cli"
 version = "0.1.0"
 edition = "2021"
+authors = ["Alin Screciu <strumf.alin@gmail.com"]
+description = "A simple CLI framework written in Rust"
+license = "MIT"
+
 
 [dependencies]
