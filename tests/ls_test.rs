@@ -1,5 +1,5 @@
 
-use rusty_cli::{Command, CommandError, CommandManager, Opt, OptValue};
+use a_rusty_cli::{Command, CommandError, CommandManager, Opt, OptValue};
 
 /// Represents the `ls` command.
 struct LsCommand;
@@ -44,7 +44,7 @@ impl Command for LsCommand {
 
         let mut all = false;
 
-        if let Some(opt) = rusty_cli::find_opt(opts, "--all".to_string()) {
+        if let Some(opt) = a_rusty_cli::find_opt(opts, "--all".to_string()) {
             if let OptValue::BOOL(value) = opt {
                 all = value;
             }
@@ -108,7 +108,7 @@ impl Command for EchoCommand {
     ) -> Result<(), CommandError> {
         let mut no_newline = false;
 
-        if let Some(opt) = rusty_cli::find_opt(opts, "--no-newline".to_string()) {
+        if let Some(opt) = a_rusty_cli::find_opt(opts, "--no-newline".to_string()) {
             if let OptValue::BOOL(value) = opt {
                 no_newline = value;
             }

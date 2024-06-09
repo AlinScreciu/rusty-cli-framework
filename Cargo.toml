@@ -1,5 +1,5 @@
 [package]
-name = "rusty_cli"
+name = "a_rusty_cli"
 version = "0.1.0"
 edition = "2021"
 authors = ["Alin Screciu <alin.screciu01@gmail.com>"]

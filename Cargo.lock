@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "rusty_cli"
+name = "a_rusty_cli"
 version = "0.1.0"
